@@ -3,7 +3,7 @@
   tasks:
   - name: install or uninstall packages
     ansible.builtin.package:
-      name: "{{item}}" # install multiple packages
+      name: "{{item.name}}" # install multiple packages
       state: "{{item.state}}"
     loop:
     - {name: 'git' , state: 'present'}
