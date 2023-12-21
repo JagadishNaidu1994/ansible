@@ -1,0 +1,13 @@
+- name: loops
+  hosts: localhost
+  tasks:
+  - name: print persons
+    ansible.builtin.debug:
+      msg: "Hello Good Morning {{item}}" # item is a default keyword by ansible to loop multiple items
+    loop:
+    - Ramesh
+    - Suresh
+    - Mahesh
+    - Naresh
+
+
