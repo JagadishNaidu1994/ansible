@@ -1,3 +1,4 @@
+#play level varaibles
 - name: varaibles at play level
   hosts: localhost
   vars: 
