@@ -5,6 +5,6 @@
     Trainer: "Siva"
     Role: "Trainer"
   tasks:
-    - name: test name 
+  - name: test name 
       ansible.builtin.debug:
       msg: "{{Course}} {{Role}} {{Trainer}}"
