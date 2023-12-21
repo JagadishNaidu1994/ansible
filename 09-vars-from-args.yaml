@@ -1,0 +1,8 @@
+#vars from args level
+
+- name: varaibles at play level
+  hosts: localhost
+  tasks:
+  - name: test name
+    ansible.builtin.debug:
+      msg: "{{Courses}} {{Roles}} {{Trainers}}"
