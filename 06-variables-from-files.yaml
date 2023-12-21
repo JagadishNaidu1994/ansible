@@ -2,7 +2,7 @@
 - name: varaibles with external files
   hosts: localhost
   vars_files: 
-  - varaibles.yaml
+  - variables.yaml
   tasks:
   - name: test name
     ansible.builtin.debug:
