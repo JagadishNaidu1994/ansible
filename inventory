@@ -1,0 +1,15 @@
+#list of servers or hosts 
+ 
+[web]
+54.167.50.158
+
+[catalogue]
+54.167.50.157 
+
+[cart]
+54.167.50.159
+
+[roboshop:children]
+web
+cart
+catalogue
