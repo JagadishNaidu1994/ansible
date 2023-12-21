@@ -1,11 +1,12 @@
-- name: install and run nginx
-  hosts: web
+- name: install and run nginx # any name for this playbook
+  hosts: web # get list of hosts from inventory 
+  become: yes # it will get root access 
   tasks:
-    - name: install nginx
+    - name: install nginx # name for the task
       ansible.builtin.package:
-        name: nginx
-        state: present
-    - name: start nginx
+        name: nginx # package name 
+        state: present # present= install ; absent = remove
+    - name: start nginx 
       ansible.builtin.service:
         name: nginx
         state: started
