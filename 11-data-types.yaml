@@ -1,0 +1,29 @@
+- name: check data types
+  hosts: localhost
+  vars:
+    NAME: Babblu #key value pair
+    Skills: #list starts with -
+    - Devops
+    - AWS
+    - Ansible
+    Experience: #map key values 
+      Devops: 4
+      AWS: 4
+      Ansible: 4
+    Trainer: true #boolean
+  tasks: 
+  - name: print key values
+    ansible.builtin.debug:
+      msg: "name : {{NAME}}"  
+
+  - name: print list
+    ansible.builtin.debug:
+      msg: "Skills are {{Skills}}"
+
+  - name: print map
+    ansible.builtin.debug:
+      msg: "Experience is {{Experience}}"
+  
+  - name: print boolean
+    ansible.builtin.debug:
+      msg: "is he a trainer ? = {{Trainer}}"
