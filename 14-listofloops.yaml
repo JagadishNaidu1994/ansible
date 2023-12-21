@@ -1,0 +1,11 @@
+- name: loops
+  hosts: localhost
+  tasks:
+  - name: print persons
+    ansible.builtin.package:
+      name: "{{item}}" # install multiple packages
+    loop:
+    - mysql
+    - git
+
+
