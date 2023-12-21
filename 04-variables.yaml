@@ -1,0 +1,10 @@
+- name: varaibles at play level
+  hosts: localhost
+  vars: 
+    Course: "Devops"
+    Trainer: "Siva"
+    Role: "Trainer"
+  tasks:
+    - name: test name 
+      ansible.builtin.debug:
+      msg: "{{Course}} {{Role}} {{Trainer}}"
