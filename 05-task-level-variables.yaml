@@ -8,7 +8,7 @@
     Role: "Trainer"
   tasks:
   - name: test name
-    vars:
+    vars: #task level variables First Priority and then chekc for global vars
       Course: "AWS"
     ansible.builtin.debug:
       msg: "{{Course}} {{Role}} {{Trainer}}"

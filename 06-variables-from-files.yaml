@@ -1,0 +1,9 @@
+#file level varaibles
+- name: varaibles with external files
+  hosts: localhost
+  vars_files: 
+  - varaibles.yaml
+  tasks:
+  - name: test name
+    ansible.builtin.debug:
+      msg: "{{Course}} {{Role}} {{Trainer}}"
